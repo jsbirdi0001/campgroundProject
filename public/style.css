@@ -1,0 +1,45 @@
+.nav
+
+.landing-image{
+    background-color: transparent;
+    background-image:url("https://jsbirdi0001.github.io/blog/landscape1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+body{
+    padding-bottom: 30px;
+    background-image: url("https://c1.staticflickr.com/5/4428/36401449295_e25881d153_b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.jumbotron {
+    background: url(https://image.freepik.com/foto-gratis/fondo-borroso-noche-ciudad-bokeh_1356-529.jpg);
+    border-radius: .3rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    background-position: center;
+}
+
+.col-lg-2, .col-md-3, .col-sm-4, img, .custom{
+    -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    -webkit-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    -o-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    transition: width 1s ease-in-out, left 1.5s ease-in-out;
+}
+@media(max-width: 760px){
+    .container-fluid{
+        padding: 0;
+    }
+    .col-md-10-custom{
+        padding:0;
+    }
+    .col-6{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

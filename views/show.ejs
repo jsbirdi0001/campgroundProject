@@ -1,0 +1,34 @@
+<% include ./partials/header %>
+<div class="col-md-12 text-center border">
+  <div class="col-md-8 text-center mt-5 border p-2" style="margin: 0 auto; box-shadow: 2px 2px 5px lightgray">
+    <h1 class="border-bottom"><%= post.name %></h1>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="<%= post.url %>" class="img-fluid" width="100%">
+        </div>
+        <div class="col-md-8">
+            <p><%= post.description %></p>
+        </div>
+    </div>
+    
+    <div class="col-md-12">
+        <h1>Comments Section</h1>
+        <% post.comments.forEach(function(comment){ %>
+            <p> 
+                <%= comment.text %> - 
+                <strong>
+                   <%= comment.author %>   
+                </strong> 
+            </p>
+        <% }) %>
+        <a href="/campgrounds/<%= post._id %>/comment/new">New Comment</a>
+        
+    </div>
+    
+  </div>
+  <div class="col-md-10" style="margin:0 auto">
+      <a href="/campgrounds" style="text-decoration: none; "><button class="btn btn-primary m-2" >Back</button></a>
+  </div>
+</div>  
+
+<% include ./partials/footer %>

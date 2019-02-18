@@ -1,0 +1,12 @@
+<% include ../partials/header %>
+
+    <div class="col-md-6" style="margin: 0 auto">
+        <form action="/campgrounds/<%= post._id %>/comments" method="POST">
+            <input type="text" placeholder="Enter name of Author.." name="author" class="p-3 border w-100" required>
+            <input type="text" placeholder="Comment Here.." name="comment" class="p-3 border w-100" required>
+            <input type="submit" class="btn btn-dark my-2 btn-block">
+        </form>
+        <a href="/campgrounds" class="btn btn-primary">Go Back</a>
+    </div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,20 @@
+<% include partials/header %>
+    <div class="container-fluid">
+        <div class="jumbotron py-1">
+            <h1 class="text-center font-weight-light">Images Posted</h1>
+            <p class="lead font-weight-light text-center">Explore yourself HERE!!</p>
+        </div>
+    
+        <div class="col-md-6" style="margin: 0 auto">
+            <form action="/campgrounds" method="POST">
+                <input type="text" placeholder="Enter name of Image" name="name" class="p-3 border w-100" required>
+                <input type="text" placeholder="Enter the url of Image" name="image" class="p-3 border w-100" required>
+                <textarea class="p-3 border w-100" type="text" name="description" required></textarea>
+                <input type="submit" class="btn btn-dark my-2 btn-block">
+            </form>
+            <a href="/campgrounds" class="btn btn-primary">Go Back</a>
+        </div>
+    </div>
+    
+    
+<% include partials/footer %>

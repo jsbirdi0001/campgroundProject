@@ -1,0 +1,36 @@
+<% include partials/header %>
+<div class="container-fluid">
+    <div class="jumbotron py-1">
+        <h1 class="text-center font-weight-light">Images Posted</h1>
+        <p class="lead font-weight-light text-center">
+            Explore yourself HERE!!<br>
+            <a href="/campgrounds/new" class="btn btn-primary my-3">Add New Post</a>
+        </p>
+        
+    </div>
+    <div class="row col-md-10 col-md-10-custom" style="margin:0 auto; display: flex; flex-wrap: wrap">
+        <% for(var i=0; i<post.length; i++){ %>
+            <div class="col-lg-3 col-md-4 col-sm-4 col-6 my-2 custom" style="transition: 0.4s">
+                <div class="border bg-light">
+                    <div class="thumbnail" >
+                        <img class="img-fluid" src="<%= post[i].url %>">
+                            <a href="/campground/<%= post[i]._id %>" class="text-white" style="text-decoration:none">
+                                <button class="btn btn-sm btn-block btn-primary" >Open Image
+                                </button>
+                            </a>
+                    </div>
+                    <div class="caption">
+                        <h5 class="text-center text-dark p-0"> <%= post[i].name %></h5>
+                        
+                    </div>
+                </div>
+                
+                 
+            </div>
+    <% } %>
+    </div>
+</div>
+<br>
+
+
+<% include partials/footer %>
